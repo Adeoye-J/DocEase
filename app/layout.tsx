@@ -3,6 +3,7 @@ import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 
 import {cn} from "@/lib/utils"
+import { ThemeProvider } from "@/components/theme-provider";
 
 // const geistSans = Geist({
 //   variable: "--font-geist-sans",
@@ -33,7 +34,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={cn("min-h-screen bg-dark-300 font-geist-sans antialiased", geistSans.variable)} >
-        {children}
+        <ThemeProvider
+            attribute="class"
+            defaultTheme="dark"
+        >
+            {children}
+        </ThemeProvider>
       </body>
     </html>
   );
