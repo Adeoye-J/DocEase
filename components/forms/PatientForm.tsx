@@ -40,6 +40,9 @@ const formSchema = z.object({
 })
  
 const PatientForm = () => {
+
+    const 
+
   // 1. Define your form.
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -93,7 +96,9 @@ const PatientForm = () => {
         />
 
 
-        <SubmitButton isLoading={isLoading} />
+        <SubmitButton isLoading={isLoading}>
+            Get Started
+        </SubmitButton>
       </form>
     </Form>
   )
