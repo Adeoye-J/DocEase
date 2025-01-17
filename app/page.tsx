@@ -8,13 +8,7 @@ export default function Home() {
     <div className="flex h-screen max-h-screen">
         {/* todo: OTP Verification */}
 
-        <Image 
-            src="/assets/doctor.jpg" 
-            height={1000}
-            width={1000}
-            alt="patient"
-            className="side-img max-w-[50%]"
-        />
+        
         <section className="remove-scrollbar container my-auto">
             <div className="sub-container max-w-[496px]">
                 <Image
@@ -35,6 +29,14 @@ export default function Home() {
                 </div>
             </div>
         </section>
+
+        <Image 
+            src="/assets/doctor.jpg" 
+            height={1000}
+            width={1000}
+            alt="patient"
+            className="side-img max-w-[50%]"
+        />
     </div>
   );
 }
