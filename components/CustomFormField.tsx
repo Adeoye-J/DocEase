@@ -23,10 +23,22 @@ interface CustomProps {
     dateFormat?: string,
     showTimeSelect?: boolean,
     children?: React.ReactNode,
-    
+    renderSkeleton?: (field: any) => React.ReactNode
 }
 
-const CustomFormField = ({control, fieldType, name,  label}: CustomProps) => {
+const RenderField = () => {
+    return(
+        <Input 
+            type='text'
+            placeholder='John Doe'
+        />
+    )
+}
+
+const CustomFormField = (props: CustomProps) => {
+
+    const {control, fieldType, name, label} = props
+
     return (
         <FormField
             control={control}
@@ -43,11 +55,13 @@ const CustomFormField = ({control, fieldType, name,  label}: CustomProps) => {
                 //     <FormMessage />
                 // </FormItem>
                 <FormItem className='flex-1'>
-                    {fieldType !== FormFieldType.Checkbox && label (
+                    {fieldType !== FormFieldType.Checkbox && label && (
                         <FormLabel>
                             {label}
                         </FormLabel>
                     )}
+
+                    <RenderField field={field} props={props} />
                 </FormItem>
             )}
         />
