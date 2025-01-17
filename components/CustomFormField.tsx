@@ -60,8 +60,12 @@ const RenderField = ({field, props} : {field: any; props: CustomProps}) => {
                     </FormControl>
                 </div>
             )
-            break;
-    
+        case FormFieldType.PhoneInput:
+            return(
+                <FormControl>
+                    <PhoneInput />
+                </FormControl>
+            )
         default:
             break;
     }
