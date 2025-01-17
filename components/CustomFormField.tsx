@@ -31,7 +31,7 @@ const RenderField = ({field, props} : {field: any; props: CustomProps}) => {
     return(
         <Input 
             type='text'
-            placeholder={pl}
+            placeholder={placeholder}
         />
     )
 }
