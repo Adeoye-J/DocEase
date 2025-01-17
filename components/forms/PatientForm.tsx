@@ -6,6 +6,7 @@ import { z } from "zod"
 import { Button } from "@/components/ui/button"
 import { Form } from "@/components/ui/form"
 import CustomFormField from "../CustomFormField"
+import SubmitButton from "../SubmitButton"
 // import { FormFieldType } from "./CustomFormField"
 
 export enum FormFieldType {
@@ -53,7 +54,7 @@ const PatientForm = () => {
     // ✅ This will be type-safe and validated.
     console.log(values)
   }
-  
+
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8 flex-1">
@@ -92,7 +93,7 @@ const PatientForm = () => {
         />
 
 
-        <Button type="submit">Submit</Button>
+        <SubmitButton isLoading={isLoading} />
       </form>
     </Form>
   )

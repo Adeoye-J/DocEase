@@ -16,7 +16,7 @@ export default function Home() {
             className="side-img max-w-[50%]"
         />
 
-        <section className="remove-scrollbar container my-auto">
+        <section className="remove-scrollbar container my-auto h-full">
             <div className="sub-container max-w-[496px]">
                 <Image
                     src="/assets/docease_logo.png" 
