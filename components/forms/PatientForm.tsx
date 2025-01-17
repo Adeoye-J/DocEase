@@ -60,15 +60,28 @@ const PatientForm = () => {
             <h1 className="header">Hello there 👋</h1>
             <p className="text-dark-700">Schedule your first appointment.</p>
         </section>
+
         <CustomFormField 
             control={form.control}
             fieldType={FormFieldType.Input}
             name="name"
             label="Full Name"
             placeholder="Dave Smith"
-            iconSrc="/assets/user.svg"
+            iconSrc="/assets/user1.svg"
             iconAlt="user"
         />
+
+        <CustomFormField 
+            fieldType={FormFieldType.Input}
+            control={form.control}
+            name="emial"
+            label="Email"
+            placeholder="davesmith@gmail.com"
+            iconSrc="/assets/email.svg"
+            iconAlt="email"
+        />
+
+
         <Button type="submit">Submit</Button>
       </form>
     </Form>
