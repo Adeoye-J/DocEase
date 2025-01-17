@@ -66,7 +66,7 @@ const PatientForm = () => {
             name="name"
             label="Full Name"
             placeholder="Dave Smith"
-            iconSrc="/assets/user.png"
+            iconSrc="/assets/user.svg"
             iconAlt="user"
         />
         <Button type="submit">Submit</Button>
