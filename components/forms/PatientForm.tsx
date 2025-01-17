@@ -14,6 +14,8 @@ export enum FormFieldType {
     Radio = "Radio",
     Checkbox = "Checkbox",
     TextArea = "TextArea",
+    PhoneInput = "PhoneInput",
+    Skeleton ="Skeleton",
     DatePicker = "DatePicker",
     TimePicker = "TimePicker",
     DateTimePicker = "DateTimePicker",
