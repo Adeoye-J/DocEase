@@ -20,10 +20,10 @@ export default function Home() {
             <div className="sub-container max-w-[496px]">
                 <Image
                     src="/assets/docease_logo.png" 
-                    height={1000}
-                    width={1000}
+                    height={100}
+                    width={100}
                     alt="Heart"
-                    className="mb-12 h-10 w-fit"
+                    // className="mb-12 h-10 w-fit"
                 />
 
                 <PatientForm />
