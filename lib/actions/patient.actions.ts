@@ -16,7 +16,7 @@ export const createUser = async (user: CreateUserParams) => {
                 Query.equal("email", [user.email])
             ])
 
-            return documents.users[0]
+            return documents?.users[0]
         }
     }
 }
