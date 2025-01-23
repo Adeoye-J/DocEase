@@ -1,9 +1,8 @@
 "use client"
- 
+
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import { z } from "zod"
-import { Button } from "@/components/ui/button"
 import { Form } from "@/components/ui/form"
 import CustomFormField from "../CustomFormField"
 import SubmitButton from "../SubmitButton"
@@ -20,7 +19,7 @@ export enum FormFieldType {
     Checkbox = "Checkbox",
     TextArea = "TextArea",
     PhoneInput = "PhoneInput",
-    Skeleton ="Skeleton",
+    Skeleton = "Skeleton",
     DatePicker = "DatePicker",
     TimePicker = "TimePicker",
     DateTimePicker = "DateTimePicker",
@@ -36,7 +35,7 @@ export enum FormFieldType {
     MultiVideoUpload = "MultiVideoUpload",
     MultiAudioUpload = "MultiAudioUpload",
 }
- 
+
 const PatientForm = () => {
 
     const [isLoading, setIsLoading] = useState(false)
@@ -45,19 +44,19 @@ const PatientForm = () => {
     // 1. Define your form.
     const form = useForm<z.infer<typeof UserFormValidation>>({
         resolver: zodResolver(UserFormValidation),
-            defaultValues: {
+        defaultValues: {
             name: "",
             email: "",
             phone: "",
         },
     })
-    
+
     // 2. Define a submit handler.
-    async function onSubmit({name, email, phone}: z.infer<typeof UserFormValidation>) {
+    async function onSubmit({ name, email, phone }: z.infer<typeof UserFormValidation>) {
         setIsLoading(true)
 
         try {
-            const userData = {name, email, phone}
+            const userData = { name, email, phone }
 
             const user = await createUser(userData)
 
@@ -75,7 +74,7 @@ const PatientForm = () => {
                     <p className="text-dark-700">Schedule your first appointment.</p>
                 </section>
 
-                <CustomFormField 
+                <CustomFormField
                     control={form.control}
                     fieldType={FormFieldType.Input}
                     name="name"
@@ -85,7 +84,7 @@ const PatientForm = () => {
                     iconAlt="user"
                 />
 
-                <CustomFormField 
+                <CustomFormField
                     fieldType={FormFieldType.Input}
                     control={form.control}
                     name="emial"
@@ -95,13 +94,13 @@ const PatientForm = () => {
                     iconAlt="email"
                 />
 
-                <CustomFormField 
+                <CustomFormField
                     fieldType={FormFieldType.PhoneInput}
                     control={form.control}
                     name="phone"
                     label="Phone Number"
                     placeholder="(234) 810-1234"
-                    
+
                 />
 
 
